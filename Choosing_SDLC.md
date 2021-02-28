@@ -4,7 +4,7 @@
 
 ### Paragraph to submit:
 
-- **Draft**: <br>We choose Incremental Development as our software development life cycle. Since more assignments about this project are expected to be published, some changes to this project might be required. As a result, we think that need a model that is able to accommodate changes. Incremental development requires multiple versions of projects to be published frequently, so it allows executable products to be generated earlier, and modification can be easily done in later versions. In this way, modification is encouraged and the risk that the product is completely useless is reduced. The restriction of this model is that to rectify a task done in previous version requires modifications in all units and is time-consuming.
+- **Draft**: <br>We choosed Incremental Development as our software development life cycle. Since more assignments about this project are expected to be published, some changes to this project might be required. As a result, we think that need a model that is able to accommodate changes. Incremental development requires multiple versions of projects to be published frequently, so it allows executable products to be generated earlier, and further modification can be easily done in later versions. In this way, modification is encouraged and the possibility of a complete failure of the product is reduced. The restriction of this model is that to rectify a task done in previous version requires modifications in all units and is time-consuming.
 
 <br>
 

@@ -1,1 +1,1 @@
-# Self-Work for COSC 310 Project
+# My workspace for COSC 310 Group Project - Chatbot
