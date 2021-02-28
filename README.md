@@ -1,1 +1,1 @@
-# work-for-main-activity
+# Self-Work for COSC 310 Project
