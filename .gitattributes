@@ -1,0 +1,6 @@
+*.jar filter=lfs diff=lfs merge=lfs -text
+code/stanford-corenlp-4.2.0/stanford-corenlp-4.2.0-models.jar filter=lfs diff=lfs merge=lfs -text
+stanford-corenlp-4.2.0-models.jar filter=lfs diff=lfs merge=lfs -text
+code. filter=lfs diff=lfs merge=lfs -text
+code/ filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
