@@ -1,4 +1,4 @@
-#import urllib
+import urllib
 from stanfordcorenlp import StanfordCoreNLP
 import nltk
 nltk.download("wordnet")
@@ -298,24 +298,24 @@ def send():
 
 
 
-                        #response = requests.get(imgURL)
-                        search_img = Image.open(requests.get(imgURL, stream=True).raw)
-                        search_img = search_img.resize((150, 150), Image. ANTIALIAS)
+                        # #response = requests.get(imgURL)
+                        # search_img = Image.open(requests.get(imgURL, stream=True).raw)
+                        # search_img = search_img.resize((150, 150), Image. ANTIALIAS)
 
 
-                        # convert to an image Tkinter can use
-                        tk_img = ImageTk.PhotoImage(search_img)
+                        # # convert to an image Tkinter can use
+                        # tk_img = ImageTk.PhotoImage(search_img)
 
 
 
 
-                        # # Added
-                        #app.change_image(imgURL)
+                        # Added
+                        app.change_image(imgURL)
 
                         
                         
                         # Display img
-                        ChatLog.image_create(END, image = tk_img)
+                        #ChatLog.image_create(END, image = tk_img)
 
 
 
@@ -325,18 +325,13 @@ def send():
                         #ChatLog.image_create(END, image = happy)
 
 
-                        # Try
-                        root = Tk()     
-                        canvas = Canvas(root, width = 200, height = 200)   
-                        #canvas.pack() 
-                        #ChatLog.window_create(END, window=Canvas(root, width = 200, height = 200))
-                        canvas.create_image(20,20, anchor=NW, image=tk_img)  
-                        ChatLog.insert(END, "\n\n")
-                        #root.destroy()
-
-                        #text = tk.Text(canvas, width=120, height=40)
-
-
+                        # # Try
+                        # root = Tk()     
+                        # canvas = Canvas(root, width = 300, height = 300)   
+                        # canvas.pack() 
+                        # canvas.create_image(20,20, anchor=NW, image=tk_img)  
+                        # ChatLog.insert(END, "\n\n")
+                        # canvas.widget.pack_forget()
 
 
 
@@ -384,26 +379,26 @@ def send():
 
 
 
-                    #response = requests.get(imgURL)
-                    search_img = Image.open(requests.get(imgURL, stream=True).raw)
-                    search_img = search_img.resize((150, 150), Image. ANTIALIAS)
+                    # #response = requests.get(imgURL)
+                    # search_img = Image.open(requests.get(imgURL, stream=True).raw)
+                    # search_img = search_img.resize((150, 150), Image. ANTIALIAS)
 
                     
 
 
-                    # convert to an image Tkinter can use
-                    tk_img = ImageTk.PhotoImage(search_img)
+                    # # convert to an image Tkinter can use
+                    # tk_img = ImageTk.PhotoImage(search_img)
 
 
 
                     # Added
-                   #app.change_image(imgURL)
+                    app.change_image(imgURL)
 
 
 
 
                     # Display img
-                    ChatLog.image_create(END, image = tk_img)
+                    #ChatLog.image_create(END, image = tk_img)
                     #ChatLog.image_create(END, image = happy)
 
 
@@ -411,63 +406,64 @@ def send():
                     ChatLog.insert(END, "\n\n")
 
 
-                    # Try
-                    root = Tk()     
-                    canvas = Canvas(root, width = 0, height = 0)   
-                    #canvas.pack() 
-                    canvas.create_image(20,20, anchor=NW, image=tk_img)  
-                    ChatLog.insert(END, "\n\n")
-                    root.destroy()
+                    # # Try
+                    # root = Tk()     
+                    # canvas = Canvas(root, width = 300, height = 300)   
+                    # canvas.pack() 
+                    # canvas.create_image(20,20, anchor=NW, image=tk_img)  
+                    # ChatLog.insert(END, "\n\n")
+                    # canvas.widget.pack_forget()
 
 
-                # Added
-                else: 
-                    ChatLog.insert(END, " : " )
-                    ChatLog.image_create(END, image = confused)
-                    res[0] = res[0].replace("%",res[2][0])
-                    ChatLog.insert(END," " + res[0] + "\n")
-                    ChatLog.insert(END,"This is what I found on Wikipedia about " + res[2][0] + ":\n")
-                    ChatLog.insert(END, wikipedia.summary(res[2][0], sentences =3) + "\n\n")
+
+                # # Added
+                # else: 
+                #     ChatLog.insert(END, " : " )
+                #     ChatLog.image_create(END, image = confused)
+                #     res[0] = res[0].replace("%",res[2][0])
+                #     ChatLog.insert(END," " + res[0] + "\n")
+                #     ChatLog.insert(END,"This is what I found on Wikipedia about " + res[2][0] + ":\n")
+                #     ChatLog.insert(END, wikipedia.summary(res[2][0], sentences =3) + "\n\n")
 
 
-                    # Display an image about this topic
-                    # Get URL
-                    imgURL = get_urls(res[2][0], 5)[0]
+                #     # Display an image about this topic
+                #     # Get URL
+                #     imgURL = get_urls(res[2][0], 5)[0]
 
-                    # # Get and Download img
-                    # #path = os.path.dirname(__file__) + "/image"
-                    # urllib.request.urlretrieve(imgURL, "image/" + res[2][0] + ".png")
-                    # search_img = Image.open("image/" + res[2][0] + ".png")
-                    # #response = requests.get(imgURL)
-                    # #search_img = Image.open(requests.get(imgURL, stream=True).raw)
-                    # search_img = search_img.resize((150, 150), Image. ANTIALIAS)
-
-
-                    # Get images
-                    #path = os.path.dirname(__file__) + "/image"
-                    # urllib.request.urlretrieve(imgURL, "image/" + res[2][0] + ".png")
-                    # search_img = Image.open("image/" + res[2][0] + ".png")
-                    #response = requests.get(imgURL)
-                    search_img = Image.open(requests.get(imgURL, stream=True).raw)
-                    search_img = search_img.resize((150, 150), Image. ANTIALIAS)
+                #     # # Get and Download img
+                #     # #path = os.path.dirname(__file__) + "/image"
+                #     # urllib.request.urlretrieve(imgURL, "image/" + res[2][0] + ".png")
+                #     # search_img = Image.open("image/" + res[2][0] + ".png")
+                #     # #response = requests.get(imgURL)
+                #     # #search_img = Image.open(requests.get(imgURL, stream=True).raw)
+                #     # search_img = search_img.resize((150, 150), Image. ANTIALIAS)
 
 
-                    # convert to an image Tkinter can use
-                    tk_img = ImageTk.PhotoImage(search_img)
+                #     # Get images
+                #     #path = os.path.dirname(__file__) + "/image"
+                #     # urllib.request.urlretrieve(imgURL, "image/" + res[2][0] + ".png")
+                #     # search_img = Image.open("image/" + res[2][0] + ".png")
+                #     #response = requests.get(imgURL)
+                #     search_img = Image.open(requests.get(imgURL, stream=True).raw)
+                #     search_img = search_img.resize((150, 150), Image. ANTIALIAS)
 
-                    # Display img
-                    ChatLog.image_create(END, image = tk_img)
-                    #ChatLog.image_create(END, image = happy)
-                    ChatLog.insert(END, "\n\n")
+
+                #     # convert to an image Tkinter can use
+                #     tk_img = ImageTk.PhotoImage(search_img)
+
+                #     # Display img
+                #     ChatLog.image_create(END, image = tk_img)
+                #     #ChatLog.image_create(END, image = happy)
+                #     ChatLog.insert(END, "\n\n")
 
 
-                    # Try
-                    root = Tk()     
-                    canvas = Canvas(root, width = 0, height = 0)   
-                    #canvas.pack() 
-                    canvas.create_image(20,20, anchor=NW, image=tk_img)  
-                    ChatLog.insert(END, "\n\n")
-                    root.destroy()
+                #     # Try
+                #     root = Tk()     
+                #     canvas = Canvas(root, width = 300, height = 300)   
+                #     canvas.pack() 
+                #     canvas.create_image(20,20, anchor=NW, image=tk_img)  
+                #     ChatLog.insert(END, "\n\n")
+                #     canvas.widget.pack_forget()
 
 
 
@@ -533,7 +529,7 @@ class GUI(tk.Tk):
         userimg = ImageTk.PhotoImage(image2)
         # Added
         global tk_img 
-        tk_img = ImageTk.PhotoImage(image2)
+        #tk_img = ImageTk.PhotoImage(image2)
 
         #Changing window image
         self.tk.call('wm', 'iconphoto', self._w,botimg )
@@ -564,21 +560,21 @@ class GUI(tk.Tk):
         frame = self.frames[cont]
         frame.tkraise()
 
-    # # Added
-    # def change_image(self, imgURL):
-    #     search_img = Image.open(requests.get(imgURL, stream=True).raw)
-    #     search_img = search_img.resize((150, 150), Image. ANTIALIAS)
+    # Added
+    def change_image(self, imgURL):
+        search_img = Image.open(requests.get(imgURL, stream=True).raw)
+        search_img = search_img.resize((150, 150), Image. ANTIALIAS)
 
 
-    #     # convert to an image Tkinter can use
-    #     tk_img = ImageTk.PhotoImage(search_img)
+        # convert to an image Tkinter can use
+        tk_img = ImageTk.PhotoImage(search_img)
 
-    #     ChatLog.image_create(END, image = tk_img)
+        ChatLog.image_create(END, image = tk_img)
 
-    #     # # Display img
-    #     # ChatLog.image_create(END, image = tk_img)
-    #     # #ChatLog.image_create(END, image = happy)
-    #     # ChatLog.insert(END, "\n\n")
+        # # Display img
+        # ChatLog.image_create(END, image = tk_img)
+        # #ChatLog.image_create(END, image = happy)
+        # ChatLog.insert(END, "\n\n")
 
 
         
