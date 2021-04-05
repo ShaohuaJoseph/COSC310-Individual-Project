@@ -534,6 +534,7 @@ class GUI(tk.Tk):
 
     # Added
     def change_image(self, imgURL):
+
         search_img = Image.open(requests.get(imgURL, stream=True).raw)
         search_img = search_img.resize((150, 150), Image. ANTIALIAS)
 
