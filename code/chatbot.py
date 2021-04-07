@@ -19,7 +19,7 @@ import wikipedia
 from flickrapi import FlickrAPI
 import os, io, requests
 import re
-
+import wikipediaapi
 
 
 
@@ -189,6 +189,49 @@ def get_urls(image_tag, max):
 
 
 
+# A function for wikipedia and wikipedia-api
+def wiki_search(search, numWords = 300): 
+
+    # 1. Setup english as language and find the page from title
+    wiki_wiki = wikipediaapi.Wikipedia('en')
+    page_py = wiki_wiki.page(search)
+
+    # 2. Check if one can find pages from original page
+    # 2.1. if true, get the wikipedia description to the title
+    try:
+        if page_py.exists():
+            result = page_py.summary[0:numWords] + " ...... "
+
+        else:
+            search = wikipedia.search(search)
+
+            # 2.2.1. If the list is None or empty, admit that cannot find anything
+            if search is None or not search: 
+                result = "... sorry, I'm not able to find anything from wikipedia"
+        
+            # 2.2.2. Else，treat the first in the list as title and get the wikipedia description
+            else: 
+                page_py = wiki_wiki.page(search[0])
+                result = page_py.summary[0:numWords] + " ...... "
+            
+    except: 
+
+        # Similar to above
+        search = wikipedia.search(search)
+
+        # 2.2.1. If the list is None or empty, dmit that cannot find anything
+        if search is None or not search: 
+            result = ".. sorry, I'm not able to find anything from wikipedia"
+        
+        # 2.2.2. Else，treat the first in the list as title and get the wikipedia description
+        else: 
+            page_py = wiki_wiki.page(search[0])
+            result = page_py.summary[0:200] + " ...... "
+    
+    return result
+
+
+
 
 
 
@@ -268,15 +311,16 @@ def send():
                         ChatLog.insert(END," " + res[0] + "\n")
                         ChatLog.insert(END,"This is what I found on Wikipedia about " + search + ":\n")
                         try:
-                            ChatLog.insert(END, wikipedia.summary(search, sentences =3) + "\n\n")
 
-
-
-
-
+                            # Added
+                            ChatLog.insert(END, wiki_search(search) + "\n\n")
+                            
 
                         except wikipedia.exceptions.DisambiguationError as e:
-                            ChatLog.insert(END, wikipedia.summary(e.options[0], sentences =3) + "\n\n")
+                            # ChatLog.insert(END, wikipedia.summary(e.options[0], sentences =3) + "\n\n")
+
+                            # Added
+                            ChatLog.insert(END, wiki_search(e.options[0]) + "\n\n")
 
 
 
@@ -285,71 +329,15 @@ def send():
                         # Get URL
                         imgURL = get_urls(search, 5)[0]
 
-                        # # Get and Download img
-                        # #path = os.path.dirname(__file__) + "/image"
-                        # urllib.request.urlretrieve(imgURL, "image/" + search + ".png")
-                        # search_img = Image.open("image/" + search + ".png")
-                        # #response = requests.get(imgURL)
-                        # #search_img = Image.open(requests.get(imgURL, stream=True).raw)
-                        # search_img = search_img.resize((150, 150), Image. ANTIALIAS)
-
-                        # Get and Download img
-                        #path = os.path.dirname(__file__) + "/image"
-                        # urllib.request.urlretrieve(imgURL, "image/" + search + ".png")
-                        # search_img = Image.open("image/" + search + ".png")
-
-
-
-
-
-                        #response = requests.get(imgURL)
-                        # search_img = Image.open(requests.get(imgURL, stream=True).raw)
-                        # search_img = search_img.resize((150, 150), Image. ANTIALIAS)
-
-
-                        # # convert to an image Tkinter can use
-                        # tk_img = ImageTk.PhotoImage(search_img)
-
-
-
-
                         # Added
                         app.change_image(imgURL)
 
-                        
-                        
-                        # # Display img
-                        # ChatLog.image_create(END, image = tk_img)
 
-
-
-
-
-                        # ChatLog.insert(END, "\n\n")
-                        # #ChatLog.image_create(END, image = happy)
-
-
-                        # # Try
-                        # root = Tk()     
-                        # canvas = Canvas(root, width = 200, height = 200)   
-                        # #canvas.pack() 
-                        # #ChatLog.window_create(END, window=Canvas(root, width = 200, height = 200))
-                        # canvas.create_image(20,20, anchor=NW, image=tk_img)  
-                        # ChatLog.insert(END, "\n\n")
-                        # #root.destroy()
-
-                        # #text = tk.Text(canvas, width=120, height=40)
-
-
-
-
-
-
-
-
+                    # No predicted words, cannot search anything or generate any meaningful graph
                     else:
                         res[0] = res[0].replace("%",msg)
                         ChatLog.insert(END," " + res[0] + "\n\n")
+
 
                 elif emotion == "Positive":
                     ChatLog.insert(END," : ")
@@ -358,9 +346,22 @@ def send():
 
                     # Added
                     general_topic = ["Video Games", "About Jump Festa", "Anime Convention", "Otaku Culture", "About Manhwa", "Describe Konosuba"]
-                    if re.search('Japanese', res[3] or res[3] in general_topic):
+                    if re.search('Japanese', res[3] or str(res[3]) in general_topic):
                         ChatLog.insert(END,"I also found a simple explanation from wikipedia about " + res[3] + ":\n")
-                        ChatLog.insert(END, wikipedia.summary(res[3], sentences = 1) + "\n\n")
+
+                        # Added
+                        ChatLog.insert(END, wiki_search(res[3], 200) + "\n\n")
+
+                    # Added
+                    if str(res[3]) not in ["greeting", "goodbye", "thanks", "noanswer", "options"]: 
+
+                        # Display an image about this topic
+                        # Get URL
+                        imgURL = get_urls(res[3], 5)[0]
+
+                        # Added
+                        app.change_image(imgURL)
+
 
                 elif emotion == "Negative" and res[1] != "noanswer":
                     ChatLog.insert(END, " : I am sorry to hear that " )
@@ -372,76 +373,17 @@ def send():
                     res[0] = res[0].replace("%",res[2][0])
                     ChatLog.insert(END," " + res[0] + "\n")
                     ChatLog.insert(END,"This is what I found on Wikipedia about " + res[2][0] + ":\n")
-                    ChatLog.insert(END, wikipedia.summary(res[2][0], sentences =3) + "\n\n")
+
+                    # Added
+                    ChatLog.insert(END, wiki_search(res[2][0]) + "\n\n")
 
 
                     # Display an image about this topic
                     # Get URL
                     imgURL = get_urls(res[2][0], 5)[0]
 
-                    # # Get and Download img
-                    # #path = os.path.dirname(__file__) + "/image"
-                    # urllib.request.urlretrieve(imgURL, "image/" + res[2][0] + ".png")
-                    # search_img = Image.open("image/" + res[2][0] + ".png")
-                    # #response = requests.get(imgURL)
-                    # #search_img = Image.open(requests.get(imgURL, stream=True).raw)
-                    # search_img = search_img.resize((150, 150), Image. ANTIALIAS)
-
-
-                    # Get images
-                    #path = os.path.dirname(__file__) + "/image"
-                    # urllib.request.urlretrieve(imgURL, "image/" + res[2][0] + ".png")
-                    # search_img = Image.open("image/" + res[2][0] + ".png")
-
-
-
-
-                    # #response = requests.get(imgURL)
-                    # search_img = Image.open(requests.get(imgURL, stream=True).raw)
-                    # search_img = search_img.resize((150, 150), Image. ANTIALIAS)
-
-                    
-
-
-                    # # convert to an image Tkinter can use
-                    # tk_img = ImageTk.PhotoImage(search_img)
-
-
-
                     # Added
                     app.change_image(imgURL)
-
-
-
-
-                    # # Display img
-                    # ChatLog.image_create(END, image = tk_img)
-                    # #ChatLog.image_create(END, image = happy)
-
-
-
-                    # ChatLog.insert(END, "\n\n")
-
-
-                    # # Try
-                    # root = Tk()     
-                    # canvas = Canvas(root, width = 0, height = 0)   
-                    # #canvas.pack() 
-                    # canvas.create_image(20,20, anchor=NW, image=tk_img)  
-                    # ChatLog.insert(END, "\n\n")
-                    # root.destroy()
-
-
-
-
-
-
-
-                    
-
-
-
-
 
                 
                 
