@@ -25,7 +25,8 @@ import wikipediaapi
 
 
 #Load the intents
-nlp = StanfordCoreNLP(r'/Users/jiangshaohua/Desktop/UBC/2020 Winter Term 2/COSC 310/Group Project/Chat-bot-team-20/code/stanford-corenlp-4.2.0')
+path = os.path.dirname(os.path.abspath(__file__)) + '/stanford-corenlp-4.2.0'
+nlp = StanfordCoreNLP(r'%s' % path)
 intents = json.loads(open('intents.json').read())
 sentiment = pickle.load(open("SentimentalAnalysis.pkl", "rb"))
 
