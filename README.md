@@ -6,7 +6,7 @@ Link for the first live demo:
 Link for the second live demo:
 <https://drive.google.com/file/d/19O4-AgcyX_AJekY5BoluZdNu83gTw2fO/view>
 =======
-Github URL: <br>https://github.com/shiro102/Chat-bot-team-20
+Github URL: <br><https://github.com/ShaohuaJoseph/COSC310-Individual-Project>
 =======
 ## Describe your topic/interest (context of the chatbot, who will use it, etc. )
 
