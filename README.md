@@ -2,9 +2,12 @@
 
 Link for the first live demo:
 <https://drive.google.com/file/d/1r-Z9tOQUw9xpVBAXJCbN5R_DBIHX0QFv/view>
-<br>
+<br><br>
 Link for the second live demo:
 <https://drive.google.com/file/d/19O4-AgcyX_AJekY5BoluZdNu83gTw2fO/view>
+<br><br>
+Link for the third live demo (Individual Project):
+<>
 =======
 Github URL: <br><https://github.com/ShaohuaJoseph/COSC310-Individual-Project>
 =======
