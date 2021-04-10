@@ -115,13 +115,88 @@ There are 12 classes used in the code: nltk, json, pickle, numpy, keras, and tki
 
     - Function: It gets the information about Proper Nouns that our bot doesn't know and searching them real time on wikipedia. With this feature, our chatbot is able to answer topics that are outside of our designed topic and the users might get more satisfaction throughout conversations.
 
-    - Snippet: ![POS Tagging](https://media.discordapp.net/attachments/798946362313408572/823878799355674624/unknown.png)
+    - Snippet: ![POS Tagging](https://media.discordapp.net/attachments/829133684774928408/830252251247411240/POS_New.png?width=544&height=719)
 
 - Recent Conversation Page
 
     - Function: It saves dialogue information everytime our users say "bye" or close the app. With this feature, our users are able to check the dialogue history which is convenient.
 
     - Snippet: ![Recent Conversation Page](https://media.discordapp.net/attachments/798946362313408572/823879216525344768/unknown.png)
+
+
+- Flickr API
+
+    - Function: Search images from Flickr.com and add them to the conversations when users ask general questions or questions that our chatbot cannot understand. With the help of these images, users might have a better understanding of what they want to know **visually**.
+
+    - Snippet: ![Flickr API](https://media.discordapp.net/attachments/829133684774928408/830254257793794108/Flickr.png?width=542&height=717)
+
+- Wikipedia API
+
+    - New Changes: This API was added as a part of the pos_tagging process but I have made a few changes to it: I used a new API package called Wikipediaapi, implemented this API to more conditions and topics, changed the unit of limiting the length of the output from sentences to characters, allowed searching with priority, and allowed the chatbot to inform the users when nothing is found in wikipedia.
+
+    - Explanation
+
+        - **1. Imported a new API package called Wikipediaapi**
+
+        <br>
+
+        - **2. Implemented this API to more conditions and topics**
+
+            - Before: works only when no answer can be found from the database (intent.json)
+
+            - Now: works in general topics such as Japanese Food, Otaku Culture and so on.
+
+            - Example
+
+                - Before this change: ![More Topics Assignment 3](https://media.discordapp.net/attachments/829133684774928408/830245517804044288/More_Topics_Assignment_3.png)
+
+                - After this change: ![More Topics Individual](https://media.discordapp.net/attachments/829133684774928408/829134317694484490/More_Topics_Individual.png?width=542&height=718)
+
+
+
+        <br><br><br>
+
+        - **3. Changed the unit of limiting the length of the output from sentences to characters ( use to be 3 sentence, not is like 300 words)**
+
+            - Benefit: more control over the length of the output (sometimes sentences can get really long)
+
+            - Example
+
+                - Before: ![Lentgh Assignment 3](https://media.discordapp.net/attachments/829133684774928408/830245645645381662/Length_Assignment_3.png?width=544&height=718)
+
+                - Now: ![Length Individual](https://media.discordapp.net/attachments/829133684774928408/830245786197032960/Length_Individual.png?width=538&height=717)
+
+
+
+            <br><br><br>
+
+        - **4. Search with priority**
+
+            - Before this change: only use an integrated function and I don't know how it is used
+
+            - After this change: designed a function by myself that search original input before generating 'recommended input'
+
+            - Code change
+
+                - Before this change: only a function from wikipedia package:  ![Priority A3](https://media.discordapp.net/attachments/829133684774928408/829135145613131876/Code_Priority_A3.png)
+
+                - After this change: ![Priority Individual](https://media.discordapp.net/attachments/829133684774928408/829134808629903420/Code_Priority_Individual.png?width=768&height=719)
+
+                <br><br><br>
+
+        - **5. Inform the users when nothing is found in wikipedia**
+
+            - Before this change: blank
+
+            - After this change: a sentence that tells users about the situation
+
+            - Example
+
+                - Before this change: ![Not Found Assignment 3](https://media.discordapp.net/attachments/829133684774928408/830245945055903754/Not_Found_Assignment_3.png)
+
+                - After this change: ![Not Found Individual](https://media.discordapp.net/attachments/829133684774928408/830246031684927508/Not_Found_Individual.png)
+
+            <br><br><br>
 
 <br>
 
