@@ -347,14 +347,12 @@ def send():
 
                     # Added
                     general_topic = ["Video Games", "About Jump Festa", "Anime Convention", "Otaku Culture", "About Manhwa", "Describe Konosuba"]
-                    if re.search('Japanese', res[3] or str(res[3]) in general_topic):
+                    #if re.search('Japanese', res[3] or str(res[3]) in general_topic):
+                    if re.search('Japanese', res[3]) or str(res[3]) in general_topic:
                         ChatLog.insert(END,"I also found a simple explanation from wikipedia about " + res[3] + ":\n")
 
                         # Added
                         ChatLog.insert(END, wiki_search(res[3], 200) + "\n\n")
-
-                    # Added
-                    if str(res[3]) not in ["greeting", "goodbye", "thanks", "noanswer", "options"]: 
 
                         # Display an image about this topic
                         # Get URL
@@ -362,6 +360,17 @@ def send():
 
                         # Added
                         app.change_image(imgURL)
+
+
+                    # # Added
+                    # if str(res[3]) not in ["greeting", "goodbye", "thanks", "noanswer", "options"]: 
+
+                    #     # Display an image about this topic
+                    #     # Get URL
+                    #     imgURL = get_urls(res[3], 5)[0]
+
+                    #     # Added
+                    #     app.change_image(imgURL)
 
 
                 elif emotion == "Negative" and res[1] != "noanswer":
