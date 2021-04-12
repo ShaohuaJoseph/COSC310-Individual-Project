@@ -20,6 +20,8 @@ from flickrapi import FlickrAPI
 import os, io, requests
 import re
 import wikipediaapi
+import random
+
 
 
 
@@ -362,17 +364,6 @@ def send():
                         app.change_image(imgURL)
 
 
-                    # # Added
-                    # if str(res[3]) not in ["greeting", "goodbye", "thanks", "noanswer", "options"]: 
-
-                    #     # Display an image about this topic
-                    #     # Get URL
-                    #     imgURL = get_urls(res[3], 5)[0]
-
-                    #     # Added
-                    #     app.change_image(imgURL)
-
-
                 elif emotion == "Negative" and res[1] != "noanswer":
                     ChatLog.insert(END, " : I am sorry to hear that " )
                     ChatLog.image_create(END, image = sad)
@@ -484,7 +475,7 @@ class GUI(tk.Tk):
         frame = self.frames[cont]
         frame.tkraise()
 
-    # Added
+    # Change the source of an image stored in the code
     def change_image(self, imgURL):
 
         search_img = Image.open(requests.get(imgURL, stream=True).raw)

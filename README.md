@@ -137,11 +137,27 @@ There are 15 classes used in the code: nltk, json, pickle, numpy, keras, tkinter
 
         - Function: Search images from Flickr.com and add them to the conversations when users ask general questions or questions that our chatbot cannot understand. With the help of these images, users might have a better understanding of what they want to know **visually**.
 
-        - Snippet: ![Flickr API](https://media.discordapp.net/attachments/829133684774928408/830254257793794108/Flickr.png?width=542&height=717)
+        - Code
+
+          - Functions: ![Functions for FlickrAPI 1](https://media.discordapp.net/attachments/829133684774928408/831204989497507870/Code_for_FlickrAPI.png?width=666&height=791) <br> ![Functions for FlickrAPI 2](https://media.discordapp.net/attachments/829133684774928408/831206859339333684/Code_for_FlickrAPI2.png)
+
+          <br>
+
+          - Use of the function (It is implemented 3 times): ![Use of FlickrAPI](https://media.discordapp.net/attachments/829133684774928408/831205503605538876/Use_of_FlickrAPI.png)
+
+        - Snippet: ![Flickr API](https://media.discordapp.net/attachments/829133684774928408/831187835008057354/Turn-28.png)
 
     - Wikipedia API
 
         - New Changes: This API was added as a part of the pos_tagging process but I have made a few changes to it: I used a new API package called Wikipediaapi, implemented this API to more conditions and topics, changed the unit of limiting the length of the output from sentences to characters, allowed searching with priority, and allowed the chatbot to inform the users when nothing is found in wikipedia.
+
+        - Code
+
+          - Function: ![Function for WikipediaAPI](https://media.discordapp.net/attachments/829133684774928408/831207286844162088/Code_for_WikipediaAPI.png?width=838&height=791)
+
+          <br>
+
+          - Use of WikipediaAPI (It is implemented 4 times): ![Use of WikipediaAPI](https://media.discordapp.net/attachments/829133684774928408/831207835269988442/Use_of_WikipediaAPI.png)
 
         - Explanation
 
@@ -220,8 +236,14 @@ There are 15 classes used in the code: nltk, json, pickle, numpy, keras, tkinter
 
 ## References
 
-Here is the link of an open-source program that helps us build our chatbot
+Here is the link of an open-source program that helps us build our chatbot <br>
 https://data-flair.training/blogs/python-chatbot-project/
 
-Here is the link of stanfordcorenlp which is a Python wrapper for Stanford CoreNLP.
+Here is the link of stanfordcorenlp which is a Python wrapper for Stanford CoreNLP. <br>
 https://github.com/Lynten/stanford-corenlp
+
+Here is the link of a code guidance that help me build functions of Flickr API <br>
+https://medium.com/@adrianmrit/creating-simple-image-datasets-with-flickr-api-2f19c164d82f
+
+Here is the link of the documentation to WikipediaAPI package that helps me build the codes for this package <br>
+https://pypi.org/project/Wikipedia-API/

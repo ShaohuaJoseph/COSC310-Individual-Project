@@ -131,7 +131,7 @@ Our team chose incremental development as our SDLC model, generated a list of ta
 34. Do you know about Jujutsu Kaisen?
 35. I like Jujutsu Kaisen!
 
- 
+ <br>
 
 ### Text demo:
 
@@ -139,18 +139,19 @@ Our team chose incremental development as our SDLC model, generated a list of ta
 
 Turn-1  User : Good day!
 
-	Anime bot : Hey wassup!
-	
+  ![Turn-1](https://media.discordapp.net/attachments/829133684774928408/830984692912095282/Turn-1.png)
+
+<br>	
 
 Turn-2	User : What can you do?
 	
-	Anime bot : I can talk about anime and their rankings. I can also talk about my favorite animes and discuss about them in detail.
+  ![Turn-2](https://media.discordapp.net/attachments/829133684774928408/830985169690296401/Turn-2.png)
 
- 
+ <br>
 Turn-3	User : Any anime to watch?
 
 	Anime bot : Koe no Katachi
-
+<br>
  
 Turn-4	User : Top action anime?
 
@@ -160,7 +161,7 @@ Turn-4	User : Top action anime?
  	3) Gintama
  	4) Hunter x Hunter
  	5) Code Geass
-
+<br>
  
 Turn-5	User : What is the best adventure anime?
 
@@ -170,7 +171,7 @@ Turn-5	User : What is the best adventure anime?
  	3) Mushishi
  	4) Made in Abyss
  	5) Vinland Saga
-
+<br>
  
 Turn-6	User : Any top-rated drama anime?
 
@@ -180,7 +181,7 @@ Turn-6	User : Any top-rated drama anime?
  	3) Clannad
  	4) Your Name.
  	5) Haikyuu!
-
+<br>
  
 Turn-7	User : Best fantasy anime to recommend?
 
@@ -191,7 +192,7 @@ Turn-7	User : Best fantasy anime to recommend?
  	4) Weathering With You
 	5) Mushoku Tensei: Jobless Reincarnation
 
- 
+ <br>
 Turn-8	User : What are the top-rated comedy anime?
 
 	Anime bot : Top 5 Comedy Animes:
@@ -201,34 +202,28 @@ Turn-8	User : What are the top-rated comedy anime?
  	4) Kaguya-Sama: Love is war
  	5) Horimiya
 
-
+<br>
 Turn-9	User : What is your favorite anime?
 
 	Anime bot : I absolutely love Konosuba
 
-
+<br>
 Turn-10	User : Tell me about Konosuba!
 	
-	Anime bot : Plot for Konosuba: Story about a High
- 	school student who is reincarnated in a
- 	new world but his pathetic luck follows him
- 	even there. Given the task of defeating the
- 	demon lord with his incompetent companions
- 	Will our protagonist be able to live the lavish
- 	life he dreamt of?
+  ![Turn-10](https://media.discordapp.net/attachments/829133684774928408/831185420837453874/Turn-10.png)
 
-
+<br>
 Turn-11	User : Who is your favorite character?
 
 	Anime bot : I like Kazuma, the main protagantist of
 	Konosuba, because he is really funny!
 
-
+<br>
 Turn-12	User : That's cool
 	
 	Anime bot : My pleasure
 
- 
+<br> 
 Turn-13	User : What anime are you watching recently?
 
 	Anime bot : Anime I am watching nowadays:
@@ -238,14 +233,14 @@ Turn-13	User : What anime are you watching recently?
  	4) Re:Zero Season 2 Part 2
  	5) Mushoku Tensei
 
- 
+ <br>
 Turn-14 User : Do you know about manga?
 
  	Anime bot : Oh Yes! I love mangas too, they are
 	just like comic books but japanese style.
 	Many animes are adapted from manga.
 
-
+<br>
 Turn-15 User : Top-rated manga?
 
   	 Anime bot : Top 5 Mangas:
@@ -255,12 +250,12 @@ Turn-15 User : Top-rated manga?
   	 4) Vagabond
   	 5) Monster
 
- 
+ <br>
 Turn-16 User : What is your favorite manga?
  
  	Anime bot : Beserk is the best manga!
 
- 
+ <br>
 Turn-17 User : Tell me about Beserk!
 
  	Anime bot : Plot for Beserk: Former mercenary,after
@@ -271,13 +266,13 @@ Turn-17 User : Tell me about Beserk!
 	marked for death he is relentlessly pursued
 	by demonic beings.
 
-
+<br>
 Turn-18 User : Who is your favorite Beserk character
 
  	Anime bot : I like Guts, the main protagantist of
 	Beserk, because he has a will of iron!
 
-
+<br>
  Turn-19 User : Manga that you read recently
 
 	 Anime bot : Manga I am reading nowadays:
@@ -287,19 +282,17 @@ Turn-18 User : Who is your favorite Beserk character
  	 4) Solo Leveling
  	 5) Tower of God
  
-
+<br>
  Turn-20 User: Recommend me manga
 
 	 Anime bot : Nisekoi
 
-
+<br>
  Turn-21 User : Do you know about Manhwa?
 
-      Anime bot : Manhwa are korean comic books just
-	like manga from japanese culture. They are
-	very popular too
+  ![Turn-21](https://media.discordapp.net/attachments/829133684774928408/831186118997049414/Turn-21.png)
 
- 
+ <br>
  Turn-22 User : What are famous Manhwa?
  
  	Anime bot : Famous Manhwa:
@@ -308,27 +301,18 @@ Turn-18 User : Who is your favorite Beserk character
  	3) God of Highschool
  	4) Noblesse
  	5) Sweet Home
-
+<br>
 
  Turn-23 User : What is Otaku culture?
 
-	 Anime bot : Otaku is a string of Japanese culture
-	 where specifically people in foreign countries
-	 have a passion for certain Japanese things
-	 such as manga, anime, video games, idols
-	 and anime conventions.
+  ![Turn-23](https://media.discordapp.net/attachments/829133684774928408/831186545687003156/Turn-23.png)
 
- 
+ <br>
  Turn- 24: What is anime convention?
 
-	 Anime bot : An anime convention is an event or
-	 gathering with a primary focus on anime,
-	 manga and Japanese culture. Commonly,
-	 anime conventions are multi-day events
-	 hosted at convention centers, hotels or
-	 college campuses.
+  ![Turn-24](https://media.discordapp.net/attachments/829133684774928408/831186871261986816/Turn-24.png)
 
- 
+ <br>
  Turn-25 User : What are famous conventions?
 
  	Anime bot : Famous Conventions:
@@ -338,32 +322,22 @@ Turn-18 User : Who is your favorite Beserk character
  	4) AnimeJapan
  	5) World Cosplay Summit
 
- 
+ <br>
  Turn-26 User : What convention do you want to vist?
 
 	 Anime bot : I really really want to visit Jump Festa,
 	 to witness the glory of shounen.
-
+<br>
 
  Turn-27 User : Tell me about Jump Festa!
 
-	 Anime bot : Jump Festa is sponsored by Shueisha
-	 Inc. publisher of the Jump manga anthologies
-	 whose roster includes One Piece, Dragon Ball,
-	 Naruto, Gintama, Haikyuu!!, Assassination
-	 Classroomand many more. The event is a
-	 prime forum for introducing new movies,
-	 manga,games and merchandise. Keep an
-	 eye out for plenty of cosplay as well!
-
+  ![Turn-27](https://media.discordapp.net/attachments/829133684774928408/831187500990857246/Turn-27.png)
+<br>
  
  Turn-28 User : Tell me about Video games
 
- 	Anime bot : Video games are a very important part
-	of otaku culture, in which the most famous
-	categories are Gacha games and Anime
-	RPGs.
-
+  ![Turn-28](https://media.discordapp.net/attachments/829133684774928408/831187835008057354/Turn-28.png)
+<br>
  
  Turn-29 User : Tell me about Gacha
 
@@ -372,7 +346,7 @@ Turn-18 User : Who is your favorite Beserk character
 	 loot boxes in video games, gacha games
 	 induce players to spend in-game currency to
 	 receive a random virtual item.
-
+<br>
  
  Turn-30 User : What are famous gacha games?
 
@@ -383,7 +357,7 @@ Turn-18 User : Who is your favorite Beserk character
 	4) Fate/Stay Night
 	5) Runterra
 
- 
+ <br>
 Turn-31 User : Tell me about Anime RPG
 
 	Anime bot : Anime RPGs are video games that
@@ -392,7 +366,7 @@ Turn-31 User : Tell me about Anime RPG
 	It ranges from open world games to hack &
 	slash games.
 
- 
+ <br>
 Turn-32 User : What are famous Anime RPG?
 
 	Anime bot : Popular Anime RPG: 
@@ -402,47 +376,28 @@ Turn-32 User : What are famous Anime RPG?
 	4) Dragon Quest XI
 	5) Dragon Ball: Xenoverse 2
 
-
+<br>
 Turn-33 User : Tell me about Japan?
 
-	Anime bot : Japan has a fascinating and multifaceted
-	culture; on the one hand it is steeped in the deepest 
-	of traditions dating back thousands of years; on the
-	other it is a society in a continual state of rapid 
-	flux, with continually shifting fads and fashions and
-	technological development that constantly pushes back 
-	the boundaries of the possible.
+  ![Turn-33](https://media.discordapp.net/attachments/829133684774928408/831188626729730118/Turn-33.png)
 	
-	
+<br>
 Turn-34 User : Tell me about People in Japan?
 
-	Anime bot: Japanese people appear at first glance to be
-	one of the most socially and ethnically homogenous groups 
-	in the world.
+  ![Turn-34](https://media.discordapp.net/attachments/829133684774928408/831188893437132800/Turn-34.png)
 	
-	
+<br>
 	
 Turn-35 User : Tell me about Religion in Japan?
 
-	Anime bot : Japan's de facto national sport (although this 
-	is not an official status) is the enthralling and at times
-	bewildering spectacle that is sumo. Deeply rooted in Japan's
-	culture, sumo has a history of over 1,500 years. Legend has 
-	it that the very survival of the Japanese people balanced on
-	the outcome of a sumo match between the gods, and indeed sumo 
-	originated as a form of Shinto ritual.
+  ![Turn-35](https://media.discordapp.net/attachments/829133684774928408/831189208357404682/Turn-35.png)
 	
-	
+<br>
 Turn-36 User : Tell me about food in Japan?
 
-	Anime bot : When it comes to food, the Japanese are among the
-	most enthusiastic and passionate of any race. Ask any Japanese
-	person about a recent trip within Japan and the conversation
-	almost always includes talk of the local food. In fact, for many
-	Japanese travelling outside of their hometowns, food is often one
-	of the primary motivators for travelling.
+  ![Turn-36](https://media.discordapp.net/attachments/829133684774928408/831189515103240252/Turn-36.png)
 	
-	
+<br>
 Turn-37 User : Tell me about Samurais?
 
 	Anime bot : In Japanese history, samurai culture and the role this
@@ -454,40 +409,34 @@ Turn-37 User : Tell me about Samurais?
 	residences. It is also deeply ingrained in the psyche of the Japanese
 	people.
 	
- 
+ <br>
 Turn-38 User : That's helpful!
 
 	Anime bot : My pleasure
 
- 
+ <br>
 Turn-39 User : See you later
 
 	Anime bot : Bye! Come back again soon
+	
+	
 	
 	
 ### Here are two unique cases where the chatbot doesn't work as intended:
 
 #### Case 1:
 
-Turn-1 User : Tell me about Jujutsu Kaisen
+Turn-1 User : Explain to me what Computer Science is
 
-       Chatbot :  Anime bot : Gacha games are video games that
-	 implement the gacha mechanic. Similar to
-	 loot boxes in video games, gacha games
-	 induce players to spend in-game currency to
-	 receive a random virtual item.
+  ![Fail2-Incomplete Search](https://media.discordapp.net/attachments/829133684774928408/831201770311123014/Fail2.png)
 
 
 
 #### Case 2:
 
-Turn-2 User:  Do you know about Jujutsu Kaisen?
-
-       Chatbot : I can talk about anything to everything
-       	 about otaku culture. I can also talk about my
-	 favourite part of otaku culture.
+Turn-2 User:  Tell me about cat?
        
- ![image](https://user-images.githubusercontent.com/31243905/110843456-51ab8080-82ce-11eb-9743-b745f19f0e4e.png)
+ ![Fail1-Cannot Understand](https://media.discordapp.net/attachments/829133684774928408/831200888403394580/Fail1.png)
 
 
 
