@@ -28,7 +28,7 @@ There are five stages of the development for the code: data importing and loadin
 
 ### **How the classes are organized:**
 
-There are 12 classes used in the code: nltk, json, pickle, numpy, keras, and tkinter, Wikipedia, Stanford Corenlp, Sentimental Analyser, GUI, Home, and Recent.
+There are 15 classes used in the code: nltk, json, pickle, numpy, keras, tkinter, Stanford Corenlp, Sentimental Analyser, GUI, Home, Recent, Wikipedia, WikipediaAPI, FlickrAPI, and requests.
 
 - Class “nltk” contains a group of libraries which provide statistical processing for English Language and is commonly used for Natural Language Processing. It is used throughout all the developing stages except the model building stage and the GUI development stage. 
 
@@ -52,8 +52,6 @@ There are 12 classes used in the code: nltk, json, pickle, numpy, keras, and tki
 
 - Class “tkinter” is used to develop a graphical user interface by powerful libraries and functions within the class. It is used to develop the final GUI.
 
-- Class “Wikipedia” is used to initiate online searches on Wikipedia in real time. It is an additional feature for our chatbot that functions when the chatbot doesn’t recognize a “Proper Noun” that is found by one of the new features we added - POS tagging.
-
 - Class “Stanford Corenlp” is a service for natural language processing. Instead of creating a wrapper ourselves, we used a wrapper for this class called stanfordcorenlp. The link is put under the reference list at the end of the README file.
 
 - “Sentimental Analyser” is a different python file created to help us with Sentiment Analysis. We create a naïve bayes model to decide between “Negative” and “Positive” Sentences. This model is used to analyze how users react to it.
@@ -63,6 +61,14 @@ There are 12 classes used in the code: nltk, json, pickle, numpy, keras, and tki
 - Class “Home” is the class for our home page in the Graphical User Interface and it contains all features present on that page.
 
 - Class “Recent”, is used to record and store recent conversation dialogue in our recent conversation page in the Graphical User Interface. It contains all features present on that page.
+
+- Class “Wikipedia” is used to initiate online searches on Wikipedia in real time. It is an additional feature for our chatbot that functions when the chatbot receives general questions or doesn’t recognize a “Proper Noun” that is found by one of the new features we added - POS tagging.
+
+- Class "WikipediaAPI" is used as an advanced version of the original "Wikipedia" Class. It offers a few methods that have functionalities that are not provided in the "Wikipedia" class. With the help of the new functionalities, I added more features to our chatbot. More details are explained in the feature list below.
+
+- Class "FlickrAPI" is used in our "charbot.py" file to search images from Flickr.com and add them to the conversations when users ask general questions or questions that our chatbot cannot understand. With the help of these images, users might have a better understanding of what they want to know **visually**
+
+- Class "requests" is used in our "chatbot.py" file to get online images based on their URLs. With the help of this package, we can convert the image URLs obtained from the Flickr API into displayable images so that they can be displayed as outputs in the GUI.
 
 <br>
 
@@ -97,60 +103,63 @@ There are 12 classes used in the code: nltk, json, pickle, numpy, keras, and tki
 
 <br>
 
-## Features: 
+## New Features and APIs Added 
 
-- Synonym recognition
+- **For Assignment 3** 
 
-    - Function: It identifies synonyms within sentences and give corresponding answers. It allows users to make inputs more diversified and give correct answers at the same time
+    - Synonym recognition
 
-    - Snippet: ![Synonym Recognition](https://media.discordapp.net/attachments/798946362313408572/825077522916048986/Screen_Shot_2021-03-26_at_11.42.51_AM.png)
+        - Function: It identifies synonyms within sentences and give corresponding answers. It allows users to make inputs more diversified and give correct answers at the same time
 
-- Sentiment analysis
+        - Snippet: ![Synonym Recognition](https://media.discordapp.net/attachments/798946362313408572/825077522916048986/Screen_Shot_2021-03-26_at_11.42.51_AM.png)
 
-    - Function: It recognizes user input that contains positive, negative, or neutral emotions and give corresponding answers without us having to code. It makes dialogue turns more lively and realistic.
+    - Sentiment analysis
 
-    - Snippet: ![Sentiment Analysis](https://media.discordapp.net/attachments/798946362313408572/823878297989546004/unknown.png)
+        - Function: It recognizes user input that contains positive, negative, or neutral emotions and give corresponding answers without us having to code. It makes dialogue turns more lively and realistic.
 
-- POS tagging
+        - Snippet: ![Sentiment Analysis](https://media.discordapp.net/attachments/798946362313408572/823878297989546004/unknown.png)
 
-    - Function: It gets the information about Proper Nouns that our bot doesn't know and searching them real time on wikipedia. With this feature, our chatbot is able to answer topics that are outside of our designed topic and the users might get more satisfaction throughout conversations.
+    - POS tagging
 
-    - Snippet: ![POS Tagging](https://media.discordapp.net/attachments/829133684774928408/830252251247411240/POS_New.png?width=544&height=719)
+        - Function: It gets the information about Proper Nouns that our bot doesn't know and searching them real time on wikipedia. With this feature, our chatbot is able to answer topics that are outside of our designed topic and the users might get more satisfaction throughout conversations.
 
-- Recent Conversation Page
+        - Snippet: ![POS Tagging](https://media.discordapp.net/attachments/829133684774928408/830252251247411240/POS_New.png?width=544&height=719)
 
-    - Function: It saves dialogue information everytime our users say "bye" or close the app. With this feature, our users are able to check the dialogue history which is convenient.
+    - Recent Conversation Page
 
-    - Snippet: ![Recent Conversation Page](https://media.discordapp.net/attachments/798946362313408572/823879216525344768/unknown.png)
+        - Function: It saves dialogue information everytime our users say "bye" or close the app. With this feature, our users are able to check the dialogue history which is convenient.
 
+        - Snippet: ![Recent Conversation Page](https://media.discordapp.net/attachments/798946362313408572/823879216525344768/unknown.png)
 
-- Flickr API
+- **For Individual Project**
 
-    - Function: Search images from Flickr.com and add them to the conversations when users ask general questions or questions that our chatbot cannot understand. With the help of these images, users might have a better understanding of what they want to know **visually**.
+    - Flickr API
 
-    - Snippet: ![Flickr API](https://media.discordapp.net/attachments/829133684774928408/830254257793794108/Flickr.png?width=542&height=717)
+        - Function: Search images from Flickr.com and add them to the conversations when users ask general questions or questions that our chatbot cannot understand. With the help of these images, users might have a better understanding of what they want to know **visually**.
 
-- Wikipedia API
+        - Snippet: ![Flickr API](https://media.discordapp.net/attachments/829133684774928408/830254257793794108/Flickr.png?width=542&height=717)
 
-    - New Changes: This API was added as a part of the pos_tagging process but I have made a few changes to it: I used a new API package called Wikipediaapi, implemented this API to more conditions and topics, changed the unit of limiting the length of the output from sentences to characters, allowed searching with priority, and allowed the chatbot to inform the users when nothing is found in wikipedia.
+    - Wikipedia API
 
-    - Explanation
+        - New Changes: This API was added as a part of the pos_tagging process but I have made a few changes to it: I used a new API package called Wikipediaapi, implemented this API to more conditions and topics, changed the unit of limiting the length of the output from sentences to characters, allowed searching with priority, and allowed the chatbot to inform the users when nothing is found in wikipedia.
 
-        - **1. Imported a new API package called Wikipediaapi**
+        - Explanation
 
-        <br>
+            - **1. Imported a new API package called Wikipediaapi**
 
-        - **2. Implemented this API to more conditions and topics**
+            <br>
 
-            - Before: works only when no answer can be found from the database (intent.json)
+            - **2. Implemented this API to more conditions and topics**
 
-            - Now: works in general topics such as Japanese Food, Otaku Culture and so on.
+                - Before: works only when no answer can be found from the database (intent.json)
 
-            - Example
+                - Now: works in general topics such as Japanese Food, Otaku Culture and so on.
 
-                - Before this change: ![More Topics Assignment 3](https://media.discordapp.net/attachments/829133684774928408/830245517804044288/More_Topics_Assignment_3.png)
+                - Example
 
-                - After this change: ![More Topics Individual](https://media.discordapp.net/attachments/829133684774928408/829134317694484490/More_Topics_Individual.png?width=542&height=718)
+                    - Before this change: ![More Topics Assignment 3](https://media.discordapp.net/attachments/829133684774928408/830245517804044288/More_Topics_Assignment_3.png)
+
+                    - After this change: ![More Topics Individual](https://media.discordapp.net/attachments/829133684774928408/829134317694484490/More_Topics_Individual.png?width=542&height=718)
 
 
 
