@@ -7,7 +7,7 @@ Link for the second live demo:
 <https://drive.google.com/file/d/19O4-AgcyX_AJekY5BoluZdNu83gTw2fO/view>
 <br><br>
 Link for the third live demo (Individual Project):
-<>
+<https://www.youtube.com/watch?v=sSWeNmJlRCk>
 =======
 Github URL: <br><https://github.com/ShaohuaJoseph/COSC310-Individual-Project>
 =======
