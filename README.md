@@ -6,14 +6,15 @@ Name: Shaohua Jiang
 
 Github URL: <br><https://github.com/ShaohuaJoseph/COSC310-Individual-Project>
 =======
+
+**Link for the latest live demo (Individual Project)**:
+<https://www.youtube.com/watch?v=sSWeNmJlRCk>
+<br><br>
 Link for the first live demo:
 <https://drive.google.com/file/d/1r-Z9tOQUw9xpVBAXJCbN5R_DBIHX0QFv/view>
 <br><br>
 Link for the second live demo:
 <https://drive.google.com/file/d/19O4-AgcyX_AJekY5BoluZdNu83gTw2fO/view>
-<br><br>
-**Link for the latest live demo (Individual Project)**:
-<https://www.youtube.com/watch?v=sSWeNmJlRCk>
 =======
 
 ## Describe your topic/interest (context of the chatbot, who will use it, etc. )
