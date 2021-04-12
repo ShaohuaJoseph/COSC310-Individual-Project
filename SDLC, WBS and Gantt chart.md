@@ -75,7 +75,7 @@ Our team chose incremental development as our SDLC model, generated a list of ta
 
 ## Insight of the contributors to this project
 
-![Commit Branch](https://media.discordapp.net/attachments/798946362313408572/825216416013090886/unknown.png?width=620&height=791)
+![Commit Branch](https://media.discordapp.net/attachments/829133684774928408/831287024556310538/Screen_Shot_2021-04-12_at_2.57.05_PM.png?width=1164&height=793)
 
 <br>
 
