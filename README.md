@@ -1,4 +1,4 @@
-# Chat-bot-team-20
+# Chat-bot-team-20-ShaohuaJiang-IndividualProject
 
 Link for the first live demo:
 <https://drive.google.com/file/d/1r-Z9tOQUw9xpVBAXJCbN5R_DBIHX0QFv/view>
